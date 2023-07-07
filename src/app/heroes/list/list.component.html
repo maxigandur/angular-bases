@@ -1,0 +1,31 @@
+<h3>Listado de Heroes</h3>
+
+<!-- Cuando deltedHero tiene un valor aparece el h3 es decir cuando borramos algun elemento del array HEROES -->
+<div *ngIf="deletedHero; else nothingWasDeleted">
+  <h3>Heroe Borrado <small class="text-danger">{{ deletedHero }}</small></h3>
+</div>
+
+<!-- Modulo INVISIBLE POR DEFECTO, creado por angular que se muestra cuando da TRUE (nothingWasDeleted) en el NGIF de arriba -->
+<ng-template #nothingWasDeleted>
+  <h3 >No se ha Borrado nada</h3>
+</ng-template>
+
+
+
+<button
+  *ngIf="heroNames.length > 0"
+  (click)="removeLastHero()"
+  class="btn btn-outline-danger">
+  Borrar Ultimo Heroe
+</button>
+
+
+
+<ul class="mt-2 list-group">
+
+  <li *ngFor="let name of heroNames"     class="list-group-item">
+    <strong>{{ name }}</strong>
+  </li>
+
+
+</ul>
