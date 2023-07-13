@@ -1,0 +1,20 @@
+<h1>DBZ MAIN PAGE</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+    <dbz-list [characterList]="characters" (onDeleteId)="onDeleteCharacter($event)" ></dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <dbz-add-characters  (onNewCharacter)="onNewCharacter($event)" ></dbz-add-characters>
+
+  </div>
+
+  <!-- <app-second-page >
+
+  </app-second-page> -->
+</div>

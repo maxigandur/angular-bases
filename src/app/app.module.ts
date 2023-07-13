@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 
 import { CounterModule } from './counter/counter.module';
 import { HeroesModule } from './heroes/heroes.module';
+import { DbzMainComponent } from './dbz/pages/main-page.component';
+import { DbzModule } from './dbz/dbz.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HeroesModule } from './heroes/heroes.module';
     /* los MODULES (EXTERNOS) SIEMPRE VAN EN LOS IMPORTS */
     BrowserModule,
     CounterModule,
-    HeroesModule
+    HeroesModule,
+    DbzModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
