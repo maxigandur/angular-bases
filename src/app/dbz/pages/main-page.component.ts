@@ -16,7 +16,7 @@ export class DbzMainComponent  {
   }
 
   get characters(): Character[]{
-    return [...this.dbzService.characters];
+    return this.dbzService.characters;
   }
 
 
